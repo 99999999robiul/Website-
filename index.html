@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello, World!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+
+    .color {
+      color: aliceblue;
+      white-space: nowrap;
+    }
+
+    .htext {
+      height: 50px;
+      width: 100%;
+      position: absolute;
+      top: 80px;
+      z-index: 99;
+      text-align: center;
+      font-size: clamp(14px, 2.5vw, 28px);
+      pointer-events: none;
+      font-size: 50px;
+      animation: moveText 20s linear infinite;
+      
+    }
+ 
+    
+
+    .nav {
+      
+      
+      position: fixed;
+      top:0px;
+      left: 0;
+      height: 28px;
+      width: 100%;
+      z-index: 9999;
+      color: white;
+      background-color:gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:0px;
+      font-size: 20px;
+      letter-spacing: 1px;
+      border-radius: 0px 35px 0px 35px;
+      
+    }
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+    /* ===== Fixed Animation Container ===== */
+    .child1 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background:tranparent;
+      z-index: 2 ;
+      overflow: hidden;
+    }
+
+    #img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        black 50%,
+        transparent 100%
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        black 50%,
+        transparent 100%
+      );
+    }
+
+    /* ===== Scrolling Content ===== */
+    .main {
+      position: relative;
+      height: 440vh;
+      width: 100%;
+      background-color: black;
+      
+    }
+
+    .child2 {
+      height: 100vh;
+      width: 100vw;
+      
+      position:absolute;
+      z-index:4;
+    }
+
+    .child3 {
+      height: 80vh;
+      width: 100vw;
+      
+      z-index:5;
+    }
+
+    .child4 {
+      position: relative;
+      height: 80vh;
+      width: 100vw;
+      
+      z-index:5;
+    }
+
+    .child5 {
+      height: 90vh;
+      width: 100vw;
+      
+      z-index:6
+    }
+
+    .child6 {
+      height: 80vh;
+      width: 100vw;
+     backbround:red;
+      position: relative;
+      
+      z-index:8;
+      display : flex;
+      justify-content:space-between;
+      
+    }
+  .zz{
+    font-size:15px;
+    color:white;
+    text-align:center;
+  }
+
+    .child7 {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      background-color: dimgray;
+      top: 100px;
+      z-index:20;
+      border-radius: 60px 60px 0px 0px;
+      color:white;
+    }
+
+    #img2 {
+      -webkit-mask-image: linear-gradient(
+        to top,
+        black 40%,
+        transparent 100%
+      );
+      mask-image: linear-gradient(
+        to top,
+        black 40%,
+        transparent 100%
+      );
+    }
+  
+
+.textt{
+  text-decoration-color: white;
+  color:white;
+}
+  
+.trans{
+   
+  color: rgba(255, 255, 255, 0.5);
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  
+}
+.pp{
+  color: rgba(255, 255, 255, 0.7);
+  margin-top:500px;
+  font-size: 15px;
+}
+  
+  .ppp{
+  color: rgba(255, 255, 255, 0.7);
+  margin-top:10px;
+  right:10px;
+  
+  font-size: 10px;
+  position:absolute;
+  
+}
+  
+  .imgx {
+    border-radius:45px;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+  
+    left:0px;
+}
+.xx{
+  position:relative;
+  display:flex;
+  justify-content:space-between;
+  height:50px;
+  width:50px;
+}
+  .futar{
+    position:absolute;
+    bottom:0px;
+    height:350px;
+    width:100%;
+    background:rgba(105, 105, 105, 0.6);
+    align: center;
+    border-radius:20px 20px 0px 0px;
+    
+  }
+.vv{
+  margin-top:150px;
+  height:50px;
+  width:50px;
+}
+  .vr{
+    border-radius:45px;
+  }
+
+  @keyframes moveText {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-400%);
+  }
+}
+  
+  
+  
+  </style>
+</head>
+<body>
+
+  <!-- ========== FIXED NAV ========== -->
+  <div class="nav">
+    <a href="https://www.facebook.com/share/1EPdQNn6t3/">facebook</a> &nbsp; <a href="https://wa.me/8801712345678" target="_blank">
+  WhatsApp
+</a> &nbsp; <a href="https://www.linkedin.com/in/99999999robiul" target="_blank">
+  LinkedIn
+</a> &nbsp; <a href="https://github.com/robiul123">GIThub</a>
+  </div>
+
+  <!-- ========== FIXED ANIMATION DIV ========== -->
+  <div class="child1">
+    <img id="img" src="00000001.jpg" alt="animation frame">
+  </div>
+
+  <!-- ========== SCROLLABLE CONTENT ========== -->
+  <div class="main">
+    
+    <p class="htext color ">
+      <i> <b>WEL<b class="trans">COME</b></i> TO MY <b class="trans">SPACE</b>. ITS THE <b class="trans">tIME</b> FOR <span><i>IMAGIN</i></span>. <b class="trans">CREAT</b>. <i>EXPERIENCE</i>.</b>
+    </p>
+
+    
+    <div class="child2">
+    <p class="pp"><i>Injustice seems just<br>
+      as long as one is the<br>
+      one committing it. </i></p>
+    </div>
+    
+    <div class="child3"><p class="textt"> chwild 3</p></div>
+    <div class="child4">
+      <p class="ppp"> Every journey begins<br>
+        with a single step ,But <br>
+        every step is advenchar.”</p>
+    </div>
+    <div class="child5"> <b class="trans"> CONTACT ME </b>
+      
+        <div class="xxx">
+          <a href="https://www.facebook.com/robiul999999999?mibextid=ZbWKwL"> <img class="xx" src="facebook.png" alt="app"></a>
+      </div>
+      
+      <div >
+        <a href="https://www.facebook.com/robiul999999999?mibextid=ZbWKwL"><img class="imgx" src="mm.png" alt="app" height="100px" width="100px"></a>
+ 
+        <a href="mailto:999999999robiul@gmail.com"><img class="imgx" src="gmail.jpeg" alt="app"></a>
+      </div>
+    </div>
+    <div class="child6 zz">
+    
+     
+      <i>The world continues to move forward, following its endless course.
+At times, humanity reveals its violence.
+At other times, it reveals its love.
+Yet, from this very reality,
+our purpose must remain clear—
+to serve humanity,
+to help others,
+and to give our very best for the well-being of people.
+But today, we have become a threat to our own existence.
+It is time to rise above politics,
+beyond discrimination,
+and beyond division.
+For our country.
+For our world.
+For humanity.
+We must stand together,
+work together,
+and build a future where truth prevails.
+The victory of truth requires the participation of us all. </i>
+      
+    </div>
+
+    <div id="img2" class="child7">
+      
+      <div class="futar">
+        
+         
+            <a href="https://www.facebook.com/share/1DinP5PeaH/"><img class="vv" src="facebook.png" alt="app"></a>
+         
+            <a href="https://www.facebook.com/share/1F2yKR3FJ2/"> <img class="vv vr " src="mm.png" alt="app" height="100px" width="100px"></a>
+          <a href="mailto:99999999robiul@gmail.com"> <img class="vv" src="gmail.jpeg" alt="app"></a>
+        <br>
+        CLICK FOR CONTACT
+        <br>
+        <br>
+        CONTACT:01307930303 <br>
+       
+        BACK BANCHER<sup>*</sup><br>
+        THINKS||CREAT||EXPLORE<br>
+        <p>© 2026 Robiul. All rights reserved.</p>
+        
+        
+        
+        
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+
+        
+
+
+
+
+  <script>
+    const image = document.getElementById("img");
+    const totalFrames = 74;
+    const totalScroll = 2740;          // স্ক্রল দূরত্ব (প্রয়োজনমতো বাড়াতে/কমাতে পারেন)
+    const pixelsPerFrame = totalScroll / totalFrames;
+
+    window.addEventListener("scroll", function () {
+      let scroll = window.scrollY;
+      let frame = Math.floor(scroll / pixelsPerFrame);
+
+      // সীমা ঠিক রাখা
+      if (frame < 1) frame = 1;
+      if (frame > totalFrames) frame = totalFrames;
+
+      // শেষ ফ্রেমে একটু ফেইড
+      if (frame === totalFrames) {
+        image.style.opacity = "0.5";
+      } else {
+        image.style.opacity = "1";
+      }
+
+      // ফ্রেম নাম্বার ৮ ডিজিটে প্যাড করে
+      let frameNumber = String(frame).padStart(8, "0");
+      let fileName = frameNumber + ".jpg";
+
+      image.src = fileName;
+    });
+  </script>
+
+</body>
+</html>
